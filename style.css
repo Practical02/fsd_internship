@@ -1,0 +1,20 @@
+h4 {
+  color: palegreen;
+}
+
+.violet {
+  color: violet;
+}
+
+.yellow {
+  color: yellow;
+}
+
+#hj {
+  color: brown;
+}
+
+#username :hover{
+    border-color: darkcyan;
+    background-color: blue;
+}
