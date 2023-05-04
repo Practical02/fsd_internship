@@ -1,13 +1,16 @@
-import './App.css';
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Newval from "./components/TableArray";
+// import Statebasics from "./components/Statebasics";
 
 function App() {
   return (
     <div className="App">
-      <h1>
-        Amal Manoj
-      </h1>
-      <input type="text" name="Username" placeholder="Username" id="username"></input><br></br><br></br>
-      <button >Submit</button>
+      <Navbar />
+
+      {/* <Statebasics/>       */}
+
+      <Newval />
     </div>
   );
 }
