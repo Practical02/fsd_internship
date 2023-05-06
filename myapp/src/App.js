@@ -1,16 +1,29 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Statebasics from "./components/Statebasics";
 import Navbar from "./components/Navbar";
-import Newval from "./components/TableArray";
-// import Statebasics from "./components/Statebasics";
+
+import React from "react";
+import TableArray from "./components/TableArray";
+import Forms from "./components/Forms";
+import ViewData from "./components/ViewData";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
 
-      {/* <Statebasics/>       */}
+      <Routes>
+        <Route path="/" element={<Statebasics />} />
+        <Route path="/table" element={<TableArray />} />
+        <Route path="/forms" element={<Forms />} />
+        <Route path="/data" element={<ViewData />} />
 
-      <Newval />
+        
+      </Routes>
+
+      {/* <Statebasics/>       */}
+      {/* <Newval /> */}
     </div>
   );
 }

@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -26,7 +27,11 @@ const Navbar = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} align="left">
             News
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit"><Link style={{textDecoration:'none',color:'white'}} to='/'>Home</Link></Button>
+          <Button color="inherit"><Link style={{textDecoration:'none',color:'white'}} to='/table'>Table</Link></Button>
+          <Button color="inherit"><Link style={{textDecoration:'none',color:'white'}} to='/forms'>Forms</Link></Button>
+          <Button color="inherit"><Link style={{textDecoration:'none',color:'white'}} to='/data'>ViewData</Link></Button>
+
         </Toolbar>
       </AppBar>
     </Box>

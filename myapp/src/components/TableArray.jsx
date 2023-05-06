@@ -11,6 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useState } from "react";
+import React from "react";
 
 const TableArray = () => {
   var [names, setNames] = useState([]);
@@ -18,15 +19,13 @@ const TableArray = () => {
   var [temp, setTemp] = useState();
 
   const addItem = () => {
-    setNames((names)=>[...names,temp]);
+    setNames((names) => [...names, temp]);
     setTemp("");
   };
 
   const numHandler = (e) => setTemp(e.target.value);
 
-
   const clearItems = () => setNames([]);
-  
 
   return (
     <div>
@@ -43,7 +42,9 @@ const TableArray = () => {
         New Value
       </Button>
       &nbsp;&nbsp;
-      <Button variant="contained" color="error" onClick={clearItems}>Clear</Button>
+      <Button variant="contained" color="error" onClick={clearItems}>
+        Clear
+      </Button>
       <br />
       <br />
       <Divider />
@@ -52,15 +53,14 @@ const TableArray = () => {
         <Table>
           <TableHead>
             <TableRow>
-              
               <TableCell>Names</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {names.map((value, index) => {
+            {names.map((value, id) => {
               return (
                 <TableRow>
-                  <TableCell key={index}>{value}</TableCell>
+                  <TableCell key={id}>{value}</TableCell>
                 </TableRow>
               );
             })}
